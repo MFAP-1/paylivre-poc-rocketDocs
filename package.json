@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-rocketdocs",
+  "name": "paylivre-poc-gatsby-rocket-docs",
   "private": true,
   "version": "1.0.0",
-  "description": "Out of the box Gatsby Starter for creating documentation websites easily and quickly. With support for MDX, code highlight, Analytics, SEO and more",
-  "author": "João Pedro Schmitz <hey@joaopedro.dev> (@jpedroschmitz)",
+  "author": "Paylivre: Manoel Pereira (@mfap-1)",
   "license": "MIT",
   "starter-name": "gatsby-starter-rocketdocs",
   "dependencies": {
