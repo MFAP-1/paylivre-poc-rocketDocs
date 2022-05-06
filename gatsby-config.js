@@ -49,4 +49,5 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
   ],
+  pathPrefix: "/paylivre-poc-rocketDocs",
 };
