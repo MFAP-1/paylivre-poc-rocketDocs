@@ -1,0 +1,49 @@
+---
+title: Java and Kotlin Testing
+description: How to use the sidebar.yml file from Rocket Docs.
+---
+
+## Testando código java
+
+```java lineNumbers=true title=src/java-example.java
+import android.app.Application;
+import android.util.Log;
+import zendesk.android.Zendesk;
+import zendesk.messaging.android.DefaultMessagingFactory;
+
+/** A sample {@link Application} with a {@link DefaultMessagingFactory} integration in Java. */
+class JavaIntegrationApplication extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        Zendesk.initialize(
+                this,
+                /*"{channel_key}"*/,
+                zendesk -> Log.i("IntegrationApplication", "Initialization successful"),
+                error -> Log.e("IntegrationApplication", "Messaging failed to initialize", error),
+                new DefaultMessagingFactory());
+    }
+}
+```
+
+## Testando código kotlin
+
+```kotlin lineNumbers=true title=src/kotlin-example.kotlin
+import io.sentry.Sentry
+
+Sentry.init { options ->
+  options.dsn = "https://examplePublicKey@o0.ingest.sentry.io/0"
+}
+```
+
+## Exemplo de tabela
+
+| Key                    | Required | Description                                                     |
+| ---------------------- | -------- | --------------------------------------------------------------- |
+| title                  | Yes      | No                                                              |
+| description            | No       | Page description                                                |
+| image                  | No       | Used for og:image                                               |
+| disableTableOfContents | No       | Disables Table Of Contents                                      |
+| ultima                 | Yes      | xxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxx |
