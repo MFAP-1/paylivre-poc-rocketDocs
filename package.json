@@ -14,11 +14,15 @@
     "gatsby-plugin-offline": "^5.2.0",
     "gatsby-plugin-remove-trailing-slashes": "^4.2.0",
     "gatsby-plugin-sitemap": "^5.2.0",
+    "prism-react-renderer": "^1.3.1",
+    "prismjs": "^1.28.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  },
   "keywords": [
     "gatsby",
     "gatsby-starter"
@@ -27,6 +31,8 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  }
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "homepage": "https://mfap-1.github.io/paylivre-poc-rocketDocs"
 }

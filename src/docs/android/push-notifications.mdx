@@ -7,18 +7,36 @@ To add items on the sidebar, it's necessary you create a `sidebar.yml` file unde
 
 ```yaml title=sidebar.yml
 # Just a simple item
-- label: 'Home'
-  link: '/'
+- label: "Home"
+  link: "/"
 # With a list of items
-- label: 'With subitems'
+- label: "With subitems"
   items:
-    - label: 'My Example'
-      link: '/my-example'
+    - label: "My Example"
+      link: "/my-example"
 ```
 
-If necessary, you can also add external links:
+Testando código java:
 
-```yaml
-- label: 'GitHub'
-  link: 'https://github.com/jpedroschmitz'
+```java lineNumbers=true
+import android.app.Application;
+import android.util.Log;
+import zendesk.android.Zendesk;
+import zendesk.messaging.android.DefaultMessagingFactory;
+
+/** A sample {@link Application} with a {@link DefaultMessagingFactory} integration in Java. */
+class JavaIntegrationApplication extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        Zendesk.initialize(
+                this,
+                /*"{channel_key}"*/,
+                zendesk -> Log.i("IntegrationApplication", "Initialization successful"),
+                error -> Log.e("IntegrationApplication", "Messaging failed to initialize", error),
+                new DefaultMessagingFactory());
+    }
+}
 ```
